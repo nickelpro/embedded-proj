@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24)
-project(embedded CXX)
+project(embedded C)
 
-add_executable(flash main.cpp)
+add_executable(flash main.c)
 target_compile_features(flash PRIVATE cxx_std_20)
 target_compile_options(flash PRIVATE
   -mmcu=atmega32u4 -Wall -Wno-overflow -fno-exceptions -fno-threadsafe-statics
